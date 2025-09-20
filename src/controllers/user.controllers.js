@@ -4,13 +4,9 @@ import { ApiResponce } from "../utils/ApiResponce.js";
 import { User } from "../models/user.models.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
-import fs from "fs";
 import path from "path";
 import { fileURLToPath } from 'url';
-//import { uploadOnCloudinary } from "../utils/cloudinary.js"; // Assuming you have this utility
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+import { uploadOnCloudinary } from "../utils/cloudinary.js"; // Assuming you have this utility
 
 const generateAccessAndRefreshTokens = async(userId) => {
     try {
